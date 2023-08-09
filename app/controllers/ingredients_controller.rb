@@ -1,11 +1,14 @@
 class IngredientsController < ApplicationController
     def index
         @ingredients = Ingredient.all
-        render json: @ingredients
+        $redis.set('my_key', 52)
+        val = $redis.get('my_key')
+        render plain: "Value set in Redis! #{val}"
+       # render json: @ingredients
     end
-
+ 
     def show
-        @ingredient = Ingredient.find_by(name: params[:name])
+        @ingredient = Ingredient.find_by(name: params[:id])
         render json: @ingredient
     end
 
