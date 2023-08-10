@@ -1,10 +1,10 @@
 class IngredientsController < ApplicationController
     def index
-        @ingredients = Ingredient.all
-        $redis.set('my_key', 52)
-        val = $redis.get('my_key')
-        render plain: "Value set in Redis! #{val}"
-       # render json: @ingredients
+        @ingredients ||= Ingredient.all
+        #$redis.set('my_key', 52)
+        #val = $redis.get('my_key')
+        #render plain: "Value set in Redis! #{val}"
+        render json: @ingredients
     end
  
     def show
