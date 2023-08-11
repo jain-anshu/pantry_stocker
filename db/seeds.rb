@@ -13,6 +13,7 @@
         {name: "Snakcs"},
         {name: "Condiments"},
         {name: "Dried Fruits and Nuts"},
+        {name: "Oils and Butters"},
         {name: "Misc"}
     ])
     units = Unit.create([
@@ -23,6 +24,11 @@
         {name: "grams",equivalent_weight_in_grams: 1 }
     ])
 
+    stores = Store.create([
+        {name: "India Metro", distance_from_me: 2, phone_number: 4086493204},
+        {name: "Nilgiris Milpitas", distance_from_me: 3, phone_number: 4089569509}
+    ])
+
     ingredients = Ingredient.create([
         {name: 'Rice',
         categories_id: Category.find_by(name: "Grains").id,
@@ -30,6 +36,31 @@
         units_id: Unit.find_by(name: "lbs"),
         status: 2},
         {name: 'Arhar Dal',
+        categories_id: Category.find_by(name: "Pulses").id,
+        quantity: 5,
+        units_id: Unit.find_by(name: "lbs"),
+        status: 2},
+        {name: 'Moong Dal dhuli',
+        categories_id: Category.find_by(name: "Pulses").id,
+        quantity: 5,
+        units_id: Unit.find_by(name: "lbs"),
+        status: 2},
+        {name: 'Moong Dal chhilke wali',
+        categories_id: Category.find_by(name: "Pulses").id,
+        quantity: 5,
+        units_id: Unit.find_by(name: "lbs"),
+        status: 2},
+        {name: 'Moong Whole',
+        categories_id: Category.find_by(name: "Pulses").id,
+        quantity: 5,
+        units_id: Unit.find_by(name: "lbs"),
+        status: 2},
+        {name: 'Masoor Dal dhuli',
+        categories_id: Category.find_by(name: "Pulses").id,
+        quantity: 5,
+        units_id: Unit.find_by(name: "lbs"),
+        status: 2},
+        {name: 'Masoor whole',
         categories_id: Category.find_by(name: "Pulses").id,
         quantity: 5,
         units_id: Unit.find_by(name: "lbs"),
