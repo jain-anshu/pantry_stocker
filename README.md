@@ -25,14 +25,12 @@ Things you may want to cover:
 
 ### To Do List
 
-- Add is_basic field to the ingredients table
 - Add store_id foreign key to ingredients table
 - Figure out how to automatically generate shopping list
 - How to show ingredients with a particular status in red color
-- Add oils and butters to categories ( in seed)
+
   Front End
+
 - build a form to add ingredients to db
 - build a form to add stores to db
 - build a form to add categories to db
-- Maybe - add is_favorite/ is_family_favorite to ingredients
-- Add also_known_as column to ingredients
