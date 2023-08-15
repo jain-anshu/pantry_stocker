@@ -1,4 +1,6 @@
 class IngredientsController < ApplicationController
+   skip_before_action :verify_authenticity_token, only: [:create]
+
     def index
         @ingredients ||= Ingredient.all
         #$redis.set('my_key', 52)
@@ -32,6 +34,6 @@ class IngredientsController < ApplicationController
 
     private
     def ingredient_params
-      params.require(:ingredient).permit(:name, :categories_id, :quantity, :units_id, :status)  
+      params.require(:ingredient).permit(:name, :categories_id, :quantity, :units_id, :status, :is_basic, :is_family_favorite)  
     end
 end
