@@ -10,7 +10,7 @@
         {name: "Grains"},
         {name: "Pulses"},
         {name: "Spices"},
-        {name: "Snakcs"},
+        {name: "Snacks"},
         {name: "Condiments"},
         {name: "Dried Fruits and Nuts"},
         {name: "Oils and Butters"},

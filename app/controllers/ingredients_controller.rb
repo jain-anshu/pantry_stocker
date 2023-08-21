@@ -14,6 +14,16 @@ class IngredientsController < ApplicationController
         render json: @ingredient
     end
 
+    def ingredients_running_low
+      @ingredients = Ingredient.where(status: 3)
+      render json: @ingredients
+    end
+
+    def basic_ingredients
+      @ingredients = Ingredient.where(is_basic: true)
+      render json: @ingredients
+    end
+
     def create
         @ingredient = Ingredient.new(ingredient_params)
         if @ingredient.save
