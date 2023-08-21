@@ -1,12 +1,12 @@
 class IngredientsController < ApplicationController
    skip_before_action :verify_authenticity_token, only: [:create]
-
+   include PaginationMethods
     def index
-        @ingredients ||= Ingredient.all
+        @ingredients = Ingredient.all.limit(limit).offset(offset)
         #$redis.set('my_key', 52)
         #val = $redis.get('my_key')
         #render plain: "Value set in Redis! #{val}"
-        render json: @ingredients
+        render json: {ingredients: @ingredients,pagination: pagination(Ingredient.count)}, formats: :json
     end
  
     def show
