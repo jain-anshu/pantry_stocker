@@ -36,9 +36,9 @@ class IngredientsController < ApplicationController
     def update 
       @ingredient = Ingredient.find(params[:id])
       if @ingredient.update(ingredient_params)
-          render json: {status: "Success"}, status: :ok
+        render json: {status: "Success"}, status: :ok
       else 
-          render json: {errors: @ingredient.errors.full_messages}, status: :unprocessable_entity
+        render json: {errors: @ingredient.errors.full_messages}, status: :unprocessable_entity
       end      
     end  
 
