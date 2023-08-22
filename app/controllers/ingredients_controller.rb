@@ -1,5 +1,5 @@
 class IngredientsController < ApplicationController
-   skip_before_action :verify_authenticity_token, only: [:create]
+   skip_before_action :verify_authenticity_token, only: [:create, :update]
    include PaginationMethods
     def index
         @ingredients = Ingredient.all.limit(limit).offset(offset)
@@ -34,11 +34,11 @@ class IngredientsController < ApplicationController
     end
 
     def update 
-      @ingredient = Ingredient.find_by(name: params[:name])
+      @ingredient = Ingredient.find(params[:id])
       if @ingredient.update(ingredient_params)
-        head :no_content 
+          render json: {status: "Success"}, status: :ok
       else 
-          render json: {errors: @ingredient.error_messages}, status: :unprocessable_entity
+          render json: {errors: @ingredient.errors.full_messages}, status: :unprocessable_entity
       end      
     end  
 
