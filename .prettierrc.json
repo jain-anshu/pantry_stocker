@@ -1,0 +1,16 @@
+{
+  "editor.inlineSuggest.enabled": true,
+  "debug.javascript.codelens.npmScripts": "never",
+  "window.zoomLevel": 1,
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "workbench.colorTheme": "Default High Contrast",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "files.autoSave": "onFocusChange",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.indentSize": 2
+}
