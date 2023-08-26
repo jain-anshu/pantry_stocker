@@ -1,5 +1,10 @@
 class StoresController < ApplicationController
     skip_before_action :verify_authenticity_token, only: [:create]
+    def index
+        @stores = Store.all
+        render json: @stores
+    end
+    
     def create
     @store = Store.new(store_params)
     if @store.save

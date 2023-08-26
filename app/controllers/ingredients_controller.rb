@@ -15,7 +15,7 @@ class IngredientsController < ApplicationController
     end
 
     def ingredients_running_low
-      @ingredients = Ingredient.where(status: 3)
+      @ingredients = Ingredient.where(status: ['running_low', 'out_of_stock'])
       render json: @ingredients
     end
 
