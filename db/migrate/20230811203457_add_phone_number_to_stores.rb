@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AddPhoneNumberToStores < ActiveRecord::Migration[7.0]
   def change
     add_column :stores, :phone_number, :integer

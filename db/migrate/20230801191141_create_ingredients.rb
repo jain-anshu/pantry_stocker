@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateIngredients < ActiveRecord::Migration[7.0]
   def change
     create_table :ingredients do |t|
@@ -10,7 +12,6 @@ class CreateIngredients < ActiveRecord::Migration[7.0]
       t.float :last_purchase_quantity
       t.float :last_purchase_price
       t.timestamps
-     
     end
   end
 end
