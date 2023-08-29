@@ -26,9 +26,7 @@ Things you may want to cover:
 ### To Do List
 
 - Add store_id foreign key to ingredients table
-- Figure out how to automatically generate shopping list
 - How to show ingredients with a particular status in red color
-- Enumerated status - figure how to best handle so its self explanatory
 
 - time units table
 - Shelf life field in ingredients table
@@ -38,5 +36,4 @@ Things you may want to cover:
   Front End
 
 - build a form to add categories to db
-- build FE routes to see shopping list, stores
 - build FE routes to forms

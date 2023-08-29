@@ -49,8 +49,6 @@ class IngredientsController < ApplicationController
   def ingredient_params
     categories_id = Category.find_by(name: params['ingredient'][:category]).id
     units_id = Unit.find_by(name: params['ingredient'][:unit]).id
-    debugger
-    
     params_hash = params.require(:ingredient).permit(:name, :quantity, :status, :is_basic,
                                        :is_family_favorite)
     params_hash[:categories_id] = categories_id

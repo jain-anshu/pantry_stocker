@@ -31,6 +31,12 @@ stores = Store.create([
                         { name: 'Nilgiris Milpitas', distance_from_me: 3, phone_number: 4_089_569_509 }
                       ])
 
+time_units = TimeUnit.create([
+    { time_unit_name: 'days', days_per_unit: 1 },
+    { time_unit_name: 'weeks', days_per_unit: 7 },
+    { time_unit_name: 'months', days_per_unit: 30.5 },
+    { time_unit_name: 'years', days_per_unit: 365 } ]);                      
+
 ingredients = Ingredient.create([
                                   { name: 'Rice Basmati',
                                     categories_id: Category.find_by(name: 'Grains').id,
