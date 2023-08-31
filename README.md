@@ -28,7 +28,6 @@ Things you may want to cover:
 - Add store_id foreign key to ingredients table
 - How to show ingredients with a particular status in red color
 
-- time units table
 - Shelf life field in ingredients table
 - shelf life unit id field in ingredients table
 - 'needs_refrigeration', 'needs_freezing' fields in ingredients table
@@ -37,3 +36,4 @@ Things you may want to cover:
 
 - build a form to add categories to db
 - build FE routes to forms
+- add the ability to scan and read receipts and update ingredients table on the basis of the date.
