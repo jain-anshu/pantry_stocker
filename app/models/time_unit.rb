@@ -1,0 +1,2 @@
+class TimeUnit < ApplicationRecord
+end
