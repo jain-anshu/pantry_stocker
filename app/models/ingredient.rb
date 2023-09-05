@@ -3,6 +3,7 @@
 class Ingredient < ApplicationRecord
   belongs_to :category, foreign_key: 'categories_id'
   belongs_to :unit, foreign_key: 'units_id'
+  belongs_to :user
 
   enum status: {
     out_of_stock: 0,
