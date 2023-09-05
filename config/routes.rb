@@ -14,6 +14,6 @@ Rails.application.routes.draw do
   resources :users
   resources :stores
   resources :ingredients
-  get '/ingredients_running_low', to: 'ingredients#ingredients_running_low'
+  get '/need_to_buy', to: 'ingredients#need_to_buy'
   get '/basic_ingredients', to: 'ingredients#basic_ingredients'
 end

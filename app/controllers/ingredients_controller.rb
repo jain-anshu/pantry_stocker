@@ -16,13 +16,13 @@ class IngredientsController < ApplicationController
     render json: @ingredient
   end
 
-  def ingredients_running_low
-    @ingredients = Ingredient.where(status: %w[running_low out_of_stock])
+  def need_to_buy
+    @ingredients = Ingredient.need_to_buy
     render json: @ingredients
   end
 
   def basic_ingredients
-    @ingredients = Ingredient.where(is_basic: true)
+    @ingredients = Ingredient.basic_ingredients
     render json: @ingredients
   end
 
