@@ -2,6 +2,7 @@
 
 class IngredientsController < ApplicationController
   skip_before_action :verify_authenticity_token, only: %i[create update]
+  before_action :authenticate_user!
   include PaginationMethods
   def index
     @ingredients = Ingredient.all.limit(limit).offset(offset)

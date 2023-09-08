@@ -33,9 +33,10 @@ Rails.application.configure do
     config.action_controller.perform_caching = false
 
     config.cache_store = :null_store
-    config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+    
   end
-
+  # Added for running devise in development mode
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local
 
